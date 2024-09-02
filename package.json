@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "snowpack dev"
+    "dev": "snowpack dev",
+    "build": "snowpack build"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,7 @@
     "@codemirror/commands": "^0.18.2",
     "@codemirror/lang-json": "^0.18.0",
     "@codemirror/view": "^0.18.16",
-    "axios": "^0.21.1",
+    "axios": "^1.7.7",
     "bootstrap": "^5.0.1",
     "pretty-bytes": "^5.6.0"
   },
