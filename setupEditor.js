@@ -1,7 +1,8 @@
-import { EditorState, basicSetup } from "@codemirror/basic-setup"
-import { defaultTabBinding } from "@codemirror/commands"
+import { basicSetup } from "codemirror"
+import { defaultKeymap } from "@codemirror/commands"
 import { EditorView, keymap } from "@codemirror/view"
 import { json } from "@codemirror/lang-json"
+import { EditorState } from "@codemirror/state"
 
 export default function setupEditors() {
   const jsonRequestBody = document.querySelector("[data-json-request-body]")
@@ -9,7 +10,7 @@ export default function setupEditors() {
 
   const basicExtensions = [
     basicSetup,
-    keymap.of([defaultTabBinding]),
+    keymap.of([defaultKeymap]),
     json(),
     EditorState.tabSize.of(2),
   ]
