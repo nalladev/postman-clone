@@ -44,8 +44,11 @@ jobs:
         with:
           name: production-files
 
+      - name: List files in root directory
+        run: ls -la
+
       - name: List files in dist directory
-        run: ls -la ./dist
+        run: ls -la ./dist || echo "No dist directory found"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
